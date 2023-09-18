@@ -9,7 +9,7 @@ let b:current_syntax = 'ghci'
 syn match ghciLineComment "---*\([^-!#$%&\*\+./<=>\?@\\^|~].*\)\?$"
 syn region ghciBlockComment start="{-" end="-}"
 syn match ghciShebang "\%^#!.*$"
-syn match ghciCommand ":[^\s]*"
+syn match ghciCommand "\:[^ ]*"
 
 hi def link ghciLineComment Comment
 hi def link ghciBlockComment Comment
