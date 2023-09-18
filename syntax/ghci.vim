@@ -9,8 +9,8 @@ let b:current_syntax = 'ghci'
 syn match ghciLineComment "---*\([^-!#$%&\*\+./<=>\?@\\^|~].*\)\?$"
 syn region ghciBlockComment start="{-" end="-}"
 syn match ghciShebang "\%^#!.*$"
-syn match ghciCommand "\:[^ ]+"
-syn match ghciExtension "\-X[^ ]+"
+syn match ghciCommand "\:[^ ]*"
+syn match ghciExtension "\-X[^ ]*"
 syn region ghciString start=+"+ skip=+\\\\\|\\"+ end=+"+
 syn match ghciChar "\<'[^'\\]'\|'\\.'\|'\\u[0-9a-fA-F]\{4}'\>"
 syn keyword ghciConditional if then else
@@ -24,7 +24,7 @@ hi def link ghciCommand Function
 hi def link ghciExtension Structure
 hi def link ghciString String
 hi def link ghciChar String
-highlight def link ghciConditional Conditional
-highlight def link ghciNumber Number
-highlight def link ghciFloat Float
+hi def link ghciConditional Conditional
+hi def link ghciNumber Number
+hi def link ghciFloat Float
 
